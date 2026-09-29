@@ -50,8 +50,8 @@ export default async function HomePage() {
         sectionClass="freelance-section"
         data={freelance}
       />
-      <AboutSection data={about} />
       <BlogsSection data={blogs} />
+      <AboutSection data={about} />
       <ContactSection data={contact} />
     </>
   );

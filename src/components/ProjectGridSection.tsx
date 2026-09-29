@@ -51,24 +51,23 @@ export function ProjectGridSection({
           <h2 className="section-main-title">{data.title}</h2>
         </div>
 
-        <div className="projects-grid-3x2">
+        <div className="project-cards-grid">
           {data.items.map((item) => (
-            <div key={item.title} className="compact-project-card">
-              <div>
-                <div className="card-top-header">
-                  <Image
-                    src={item.image}
-                    alt={item.imageAlt}
-                    width={48}
-                    height={48}
-                    className="project-thumb"
-                  />
-                  <div className="project-title-meta">
-                    <h3>{item.title}</h3>
-                    <span className="project-category-tag">{item.category}</span>
-                  </div>
-                </div>
-                <p className="compact-overview">{item.overview}</p>
+            <article key={item.title} className="project-card-modern">
+              <div className="project-card-media">
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="project-card-image"
+                />
+                <span className="project-card-category">{item.category}</span>
+              </div>
+
+              <div className="project-card-body">
+                <h3 className="project-card-title">{item.title}</h3>
+                <p className="project-card-overview">{item.overview}</p>
                 <div className="compact-tech-stack">
                   {item.tech.map((tag) => (
                     <span key={tag} className="compact-tech-tag">
@@ -76,36 +75,37 @@ export function ProjectGridSection({
                     </span>
                   ))}
                 </div>
-              </div>
-              {item.actions.length > 0 ? (
-                <div className="compact-actions">
-                  {item.actions.map((action) => {
-                    const behavior = action.behavior ?? "link";
-                    const isExternalLink =
-                      behavior === "link" &&
-                      action.href &&
-                      action.href !== "#";
-                    const isNoop = behavior === "noop";
 
-                    return (
-                      <a
-                        key={action.label}
-                        href={isExternalLink ? action.href : "#"}
-                        target={isExternalLink ? "_blank" : undefined}
-                        rel={
-                          isExternalLink ? "noopener noreferrer" : undefined
-                        }
-                        className={`compact-btn compact-btn-${action.variant}${isNoop ? " compact-btn-noop" : ""}`}
-                        onClick={(e) => handleAction(e, action)}
-                        aria-disabled={isNoop ? true : undefined}
-                      >
-                        <i className={action.icon} /> {action.label}
-                      </a>
-                    );
-                  })}
-                </div>
-              ) : null}
-            </div>
+                {item.actions.length > 0 ? (
+                  <div className="project-card-actions">
+                    {item.actions.map((action) => {
+                      const behavior = action.behavior ?? "link";
+                      const isExternalLink =
+                        behavior === "link" &&
+                        action.href &&
+                        action.href !== "#";
+                      const isNoop = behavior === "noop";
+
+                      return (
+                        <a
+                          key={action.label}
+                          href={isExternalLink ? action.href : "#"}
+                          target={isExternalLink ? "_blank" : undefined}
+                          rel={
+                            isExternalLink ? "noopener noreferrer" : undefined
+                          }
+                          className={`compact-btn compact-btn-${action.variant}${isNoop ? " compact-btn-noop" : ""}`}
+                          onClick={(e) => handleAction(e, action)}
+                          aria-disabled={isNoop ? true : undefined}
+                        >
+                          <i className={action.icon} /> {action.label}
+                        </a>
+                      );
+                    })}
+                  </div>
+                ) : null}
+              </div>
+            </article>
           ))}
         </div>
       </section>

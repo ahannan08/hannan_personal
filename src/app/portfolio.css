@@ -494,72 +494,100 @@
       color: var(--text);
     }
 
-    .projects-grid-3x2 {
+    .project-cards-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
     }
 
-    .compact-project-card {
+    .project-card-modern {
       background: var(--card-bg);
       border: 1.5px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
+      border-radius: 16px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.25s ease;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .project-card-modern:hover {
+      border-color: rgba(108, 92, 231, 0.45);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(108, 92, 231, 0.12);
+    }
+
+    .project-card-media {
       position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
     }
 
-    .compact-project-card:hover {
-      border-color: var(--primary);
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(108, 92, 231, 0.1);
-    }
-
-    .card-top-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 0.8rem;
-    }
-
-    .project-thumb {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
+    .project-card-image {
       object-fit: cover;
-      flex-shrink: 0;
-      border: 1px solid var(--border);
+      transition: transform 0.45s ease;
     }
 
-    .project-title-meta h3 {
-      font-size: 1.05rem;
+    .project-card-modern:hover .project-card-image {
+      transform: scale(1.05);
+    }
+
+    .project-card-category {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: 0.02em;
+    }
+
+    .project-card-body {
+      padding: 1.35rem 1.4rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-card-title {
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text);
-      line-height: 1.2;
+      line-height: 1.3;
+      margin-bottom: 0.55rem;
+      letter-spacing: -0.02em;
     }
 
-    .project-category-tag {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    .compact-overview {
-      font-size: 0.86rem;
+    .project-card-overview {
+      font-size: 0.9rem;
       color: var(--text-muted);
-      line-height: 1.45;
+      line-height: 1.55;
       margin-bottom: 1rem;
+      flex: 1;
+    }
+
+    .project-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      padding-top: 1rem;
+      margin-top: auto;
+      border-top: 1px solid var(--border);
     }
 
     .compact-tech-stack {
       display: flex;
       gap: 6px;
       flex-wrap: wrap;
-      margin-bottom: 1rem;
     }
 
     .compact-tech-tag {
@@ -570,14 +598,6 @@
       border: 1px solid var(--border);
       border-radius: 4px;
       color: var(--text);
-    }
-
-    .compact-actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      padding-top: 0.8rem;
-      border-top: 1px solid var(--border);
     }
 
     .compact-btn {
@@ -1321,7 +1341,7 @@
 
     /* Responsive Design */
     @media (max-width: 1100px) {
-      .projects-grid-3x2, .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .project-cards-grid, .skills-grid { grid-template-columns: repeat(2, 1fr); }
       .about-layout {
         grid-template-columns: 1fr;
       }
@@ -1366,7 +1386,7 @@
       .hero h1 { font-size: 2.6rem; }
       .exp-layout { grid-template-columns: 1fr; gap: 2rem; }
       .exp-sticky-left { position: relative; top: 0; }
-      .projects-grid-3x2, .skills-grid { grid-template-columns: 1fr; }
+      .project-cards-grid, .skills-grid { grid-template-columns: 1fr; }
       .skills-toolbox-row {
         grid-template-columns: 1fr;
         gap: 0.75rem;

@@ -6,7 +6,7 @@
     {
       "title": "Learners Pod",
       "category": "Dubai EdTech",
-      "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=200&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=900&h=506&auto=format&fit=crop",
       "imageAlt": "Learners Pod",
       "overview": "Full-stack Dubai e-learning platform hosting 1000+ courses with SEO-friendly pages, Supabase auth, DB, and RBAC admin dashboards.",
       "tech": ["Next.js", "Supabase", "RBAC", "Tailwind"],
@@ -17,7 +17,7 @@
     {
       "title": "Liberty Overseas",
       "category": "Immigration",
-      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=200&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=900&h=506&auto=format&fit=crop",
       "imageAlt": "Liberty Overseas",
       "overview": "Visa and overseas immigration consultancy web application serving Indian applicants across global destinations.",
       "tech": ["Next.js", "Supabase", "TypeScript"],
@@ -28,7 +28,7 @@
     {
       "title": "Service Lead CRM",
       "category": "SaaS CRM",
-      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=200&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=900&h=506&auto=format&fit=crop",
       "imageAlt": "Service Lead CRM",
       "overview": "Custom CRM dashboard platform built for service-based businesses to track, manage, and convert client leads efficiently.",
       "tech": ["Next.js", "Supabase", "PostgreSQL"],
@@ -39,7 +39,7 @@
     {
       "title": "RS Builders",
       "category": "Real Estate",
-      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=200&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=900&h=506&auto=format&fit=crop",
       "imageAlt": "RS Builders",
       "overview": "Modern real estate and construction services platform featuring property listings and client inquiry workflows.",
       "tech": ["React", "Tailwind", "UI/UX"],
@@ -50,7 +50,7 @@
     {
       "title": "IT Works",
       "category": "IT Agency",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=200&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=900&h=506&auto=format&fit=crop",
       "imageAlt": "IT Works",
       "overview": "Corporate agency website for an IT solutions provider highlighting software services, consultancy, and client portfolios.",
       "tech": ["Next.js", "TypeScript", "Framer Motion"],
@@ -61,7 +61,7 @@
     {
       "title": "Shopify E-Commerce Sites",
       "category": "E-Commerce",
-      "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=200&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=900&h=506&auto=format&fit=crop",
       "imageAlt": "Shopify E-commerce Sites",
       "overview": "Custom liquid theme development and store customization for direct-to-consumer e-commerce retail brands.",
       "tech": ["Shopify", "Liquid", "CSS3", "Storefront API"],
