@@ -1,0 +1,79 @@
+{
+  "subtitle": "EXPERIENCE",
+  "title": "Where I've been",
+  "nav": [
+    { "id": "exp-1", "company": "Alonzo AI", "meta": "Jun 2025 — Present" },
+    { "id": "exp-2", "company": "FS Academy", "meta": "Full Stack Developer" },
+    { "id": "exp-3", "company": "Freelance", "meta": "AI & Full Stack Developer" }
+  ],
+  "entries": [
+    {
+      "id": "exp-1",
+      "title": "Alonzo AI",
+      "date": "Jun 2025 — Present",
+      "organization": null,
+      "companyUrl": "https://www.linkedin.com/company/alonzo-ai/posts/?feedView=all",
+      "projects": [
+        {
+          "icon": "fa-solid fa-terminal",
+          "title": "Project 1: NLP-to-SQL Search Platform (American College Football/Sports Analytics)",
+          "bullets": [
+            "Built backend architecture from scratch for an <strong>NLP-to-SQL search platform</strong> on team/player statistics, covering prompt engineering, model benchmarking, API testing, and database design.",
+            "Extended the platform with a <strong>hybrid RAG chatbot</strong> for query assistance, <strong>Stripe subscription integration</strong>, and <strong>Redis caching</strong>; frontend built in <strong>TypeScript</strong>."
+          ],
+          "skills": ["NLP-to-SQL", "Hybrid RAG", "TypeScript", "Redis", "Stripe"]
+        },
+        {
+          "icon": "fa-solid fa-robot",
+          "title": "Project 2: CA (Chartered Accountant) Workflow Automation",
+          "bullets": [
+            "Developed an automated system using <strong>Playwright</strong> to log into user accounts and scrape financial data, storing structured records in <strong>PostgreSQL</strong> with <strong>RBAC-based access control</strong>.",
+            "Built a data management dashboard with <strong>WhatsApp integration</strong> for notifications; frontend built in <strong>TypeScript</strong>."
+          ],
+          "skills": ["Playwright", "PostgreSQL", "RBAC", "WhatsApp API", "TypeScript"]
+        },
+        {
+          "icon": "fa-solid fa-heart-pulse",
+          "title": "Project 3: Medical ECG Prediction System (In Progress)",
+          "bullets": [
+            "Researched model evaluation techniques to predict <strong>ECG waveforms</strong> and built a rule-based engine as part of Version 1, for early detection of cardiac shock types/pre-alarm conditions.",
+            "Transitioning the rule-based engine to <strong>ML-based prediction</strong>, using <strong>Azure/AWS infrastructure</strong> for data storage; frontend built in <strong>React</strong>."
+          ],
+          "skills": ["ECG Prediction", "Machine Learning", "AWS / Azure", "React"]
+        }
+      ],
+      "bullets": [],
+      "skills": []
+    },
+    {
+      "id": "exp-2",
+      "title": "Full Stack Developer",
+      "date": null,
+      "organization": "FS Academy",
+      "companyUrl": "https://www.linkedin.com/company/full-stack-academy-india/posts/?feedView=all",
+      "projects": [],
+      "bullets": [
+        "Built real-time chatbot backends with <strong>Node.js & Socket.io</strong>.",
+        "Developed MERN applications, improving frontend performance & <strong>reducing API response times by 30%</strong>.",
+        "Implemented <strong>Retrieval-Augmented Generation (RAG) pipelines</strong> for context-aware question answering using custom datasets.",
+        "Built and maintained CI/CD pipelines with <strong>GitHub Actions, Jenkins, and Azure DevOps</strong>.",
+        "Experienced in <strong>MLOps practices</strong> including model deployment, monitoring, and lifecycle management across cloud environments.",
+        "Containerized backend services using <strong>Docker</strong> for consistent deployment across environments."
+      ],
+      "skills": ["Node.js", "Socket.io", "MERN Stack", "RAG Pipelines", "Docker", "CI/CD", "MLOps"]
+    },
+    {
+      "id": "exp-3",
+      "title": "Freelance Developer",
+      "date": null,
+      "organization": "Client & Contract Engineering",
+      "projects": [],
+      "bullets": [
+        "<strong>Mobile Applications:</strong> Developed 3 cross-platform mobile applications for clients using <strong>Flutter & React Expo</strong>, integrated OAuth authentication, and optimized backend APIs.",
+        "<strong>UI/UX & Web Development:</strong> Designed and delivered <strong>10+ UI/UX projects</strong> for service-based clients across real estate, education platforms, document management services, and CRM software.",
+        "<strong>Full-Stack Production App:</strong> Built a production full-stack application from scratch using <strong>Supabase</strong> for database & auth, created custom dashboards, and implemented RBAC. Currently scaling with <strong>500+ active users</strong>."
+      ],
+      "skills": ["Flutter", "React Expo", "OAuth", "Supabase", "UI/UX Design", "500+ Users"]
+    }
+  ]
+}

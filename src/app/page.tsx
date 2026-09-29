@@ -1,69 +1,58 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { AboutSection } from "@/components/AboutSection";
+import { BlogsSection } from "@/components/BlogsSection";
+import { ContactSection } from "@/components/ContactSection";
+import { ExperienceSection } from "@/components/ExperienceSection";
+import { FixedSocial } from "@/components/FixedSocial";
+import { Header } from "@/components/Header";
+import { HeroSection } from "@/components/HeroSection";
+import { ProjectGridSection } from "@/components/ProjectGridSection";
+import { SkillsSection } from "@/components/SkillsSection";
+import { loadAllPortfolioContent } from "@/lib/content";
+import type {
+  AboutContent,
+  BlogsContent,
+  ContactContent,
+  ExperienceContent,
+  HeroContent,
+  ProjectsContent,
+  SiteContent,
+  SkillsContent,
+} from "@/types/portfolio";
 
-export default function Home() {
+export default async function HomePage() {
+  const content = await loadAllPortfolioContent();
+
+  const site = content.site as SiteContent;
+  const hero = content.hero as HeroContent;
+  const experience = content.experience as ExperienceContent;
+  const projects = content.projects as ProjectsContent;
+  const freelance = content.freelance as ProjectsContent;
+  const skills = content.skills as SkillsContent;
+  const about = content.about as AboutContent;
+  const blogs = content.blogs as BlogsContent;
+  const contact = content.contact as ContactContent;
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <div className="grid-bg" />
+      <Header site={site} />
+      <FixedSocial social={site.social} />
+      <HeroSection data={hero} />
+      <SkillsSection data={skills} />
+      <ExperienceSection data={experience} />
+      <ProjectGridSection
+        id="projects"
+        sectionClass="projects-section"
+        data={projects}
+      />
+      <ProjectGridSection
+        id="freelance"
+        sectionClass="freelance-section"
+        data={freelance}
+      />
+      <AboutSection data={about} />
+      <BlogsSection data={blogs} />
+      <ContactSection data={contact} />
+    </>
   );
 }

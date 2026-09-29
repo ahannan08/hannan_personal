@@ -1,0 +1,36 @@
+{
+  "subtitle": "TECHNICAL EXPERTISE",
+  "title": "Skills & Capabilities",
+  "categories": [
+    {
+      "icon": "fa-solid fa-brain",
+      "title": "AI Development",
+      "skills": ["TensorFlow", "PyTorch", "LangChain", "OpenAI API", "Whisper"]
+    },
+    {
+      "icon": "fa-solid fa-code",
+      "title": "Languages",
+      "skills": ["TypeScript", "Python", "JavaScript"]
+    },
+    {
+      "icon": "fa-solid fa-layer-group",
+      "title": "Frameworks",
+      "skills": ["React", "Next.js", "FastAPI", "Node.js", "Flutter", "Shopify", "WordPress"]
+    },
+    {
+      "icon": "fa-solid fa-database",
+      "title": "Databases",
+      "skills": ["PostgreSQL", "Firebase", "Supabase", "MySQL", "SQLite", "DuckDB"]
+    },
+    {
+      "icon": "fa-solid fa-cloud",
+      "title": "Cloud Services",
+      "skills": ["AWS", "Azure", "GCP", "Hetzner"]
+    },
+    {
+      "icon": "fa-solid fa-gears",
+      "title": "DevOps Tools",
+      "skills": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "GitLab", "Terraform", "Prometheus"]
+    }
+  ]
+}

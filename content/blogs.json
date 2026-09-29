@@ -1,0 +1,40 @@
+{
+  "subtitle": "WRITING & INSIGHTS",
+  "title": "Technical Blog",
+  "topics": ["Authentication", "Cloud (AWS)", "Observability"],
+  "posts": [
+    {
+      "featured": true,
+      "category": "Mobile Development",
+      "date": "Aug 2025",
+      "readTime": "12 min read",
+      "title": "Implementing OAuth in React Expo Application",
+      "href": "#",
+      "icon": "fa-solid fa-shield-halved",
+      "excerpt": "A step-by-step walkthrough of adding OAuth 2.0 to an Expo app: choosing providers, handling redirect URIs with deep linking, storing tokens securely, and refreshing sessions without breaking the native UX.",
+      "tags": ["React Native", "Expo", "OAuth 2.0", "Auth Session"]
+    },
+    {
+      "featured": false,
+      "category": "Cloud",
+      "date": "Jul 2025",
+      "readTime": "10 min read",
+      "title": "Getting Started with AWS Services",
+      "href": "#",
+      "icon": "fa-brands fa-aws",
+      "excerpt": "An approachable primer on core AWS building blocks—IAM, S3, EC2, RDS, and Lambda—and how to wire them together for a typical full-stack deployment with sensible defaults and cost awareness.",
+      "tags": ["AWS", "IAM", "S3", "Serverless"]
+    },
+    {
+      "featured": false,
+      "category": "DevOps",
+      "date": "Jun 2025",
+      "readTime": "9 min read",
+      "title": "Exploring Monitoring Tools for Web Application",
+      "href": "#",
+      "icon": "fa-solid fa-chart-line",
+      "excerpt": "Comparing logs, metrics, and traces for web apps—when to reach for Prometheus, Grafana, Sentry, or APM suites, and how to define SLIs that actually help you debug incidents faster.",
+      "tags": ["Prometheus", "Grafana", "APM", "SRE"]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "subtitle": "GET TO KNOW ME",
+  "title": "About Me",
+  "roleBadge": {
+    "icon": "fa-solid fa-code",
+    "label": "Passionate Software Engineer"
+  },
+  "introHeading": "Building with curiosity, cloud depth, and AI in mind",
+  "points": [
+    {
+      "icon": "fa-solid fa-bug",
+      "html": "Enjoy <strong>debugging</strong> — both for the challenge and the reward."
+    },
+    {
+      "icon": "fa-solid fa-cloud",
+      "html": "Passionate about exploring <strong>Cloud Solutions and Architecture</strong> at the highest level. Currently preparing for <strong>AWS</strong> and <strong>Oracle Cloud</strong> certifications to strengthen cloud expertise."
+    },
+    {
+      "icon": "fa-solid fa-robot",
+      "html": "Interested in building projects involving <strong>AI agents development</strong> and <strong>real-time deployment</strong>."
+    }
+  ],
+  "education": {
+    "degree": "Bachelor of Engineering in Computer Science",
+    "school": "Methodist College of Engineering and Technology",
+    "location": "Hyderabad, Telangana, India"
+  },
+  "hobbies": [
+    { "icon": "fa-solid fa-futbol", "label": "Football" },
+    { "icon": "fa-solid fa-microchip", "label": "Exploring technologies" },
+    { "icon": "fa-solid fa-book-open", "label": "Reading tech blogs" }
+  ]
+}

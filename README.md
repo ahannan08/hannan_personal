@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio (Next.js)
 
-## Getting Started
+Single-page portfolio matching the static HTML design. Section copy lives in JSON under `content/`.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| File | Section |
+|------|---------|
+| `content/site.json` | Header nav, social links, resume |
+| `content/hero.json` | Banner / metrics |
+| `content/experience.json` | Experience |
+| `content/projects.json` | Featured projects |
+| `content/freelance.json` | Freelance work |
+| `content/skills.json` | Skills |
+| `content/about.json` | About me |
+| `content/blogs.json` | Blog list |
+| `content/contact.json` | Contact copy |
 
-## Learn More
+Edit these files to update the site. HTML snippets in experience/about bullets use `<strong>` tags.
 
-To learn more about Next.js, take a look at the following resources:
+## Remote JSON (later)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+When you have a hosted URL for your JSON files, set in `.env.local`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```env
+CONTENT_BASE_URL=https://your-host.example.com/path/to/content
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The app will load `{CONTENT_BASE_URL}/{section}.json` instead of local files (revalidated every 60s).

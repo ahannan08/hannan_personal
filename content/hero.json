@@ -1,0 +1,15 @@
+{
+  "statusBadge": "Open for AI Development, Full Stack & UI/UX Projects",
+  "headingPrefix": "Hello, I'm",
+  "name": "Your Name",
+  "bio": "Passionate AI Engineer building deep learning architectures, intelligent agents, RAG architectures, and full stack development from scratch.",
+  "hireEmail": "er.mahannan@gmail.com",
+  "hireButtonLabel": "Hire Me",
+  "metrics": [
+    { "value": "3+", "label": "Years Exp" },
+    { "value": "10+", "label": "Side Projects" },
+    { "value": "2+", "label": "Hackathons" },
+    { "value": "20+", "label": "Students Mentored" },
+    { "value": "2+", "label": "Certifications" }
+  ]
+}

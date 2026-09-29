@@ -1,0 +1,22 @@
+{
+  "title": "AI Engineer Portfolio",
+  "brand": {
+    "label": "Portfolio",
+    "icon": "fa-solid fa-brain"
+  },
+  "nav": [
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Freelance", "href": "#freelance" },
+    { "label": "About", "href": "#about" },
+    { "label": "Blog", "href": "#blogs" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "resumeUrl": "/resume.pdf",
+  "social": [
+    { "href": "https://github.com/ahannan08", "icon": "fa-brands fa-github", "title": "GitHub" },
+    { "href": "https://www.linkedin.com/in/mahannanmuntasir/", "icon": "fa-brands fa-linkedin", "title": "LinkedIn" },
+    { "href": "mailto:er.mahannan@gmail.com", "icon": "fa-solid fa-envelope", "title": "Email" }
+  ]
+}

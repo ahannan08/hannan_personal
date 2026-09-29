@@ -1,0 +1,67 @@
+{
+  "subtitle": "MY PORTFOLIO",
+  "title": "Featured Projects",
+  "unavailableMessage": "There is some issue loading for now.",
+  "items": [
+    {
+      "title": "Virtual AI Interview App",
+      "category": "AI & Speech",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=200&auto=format&fit=crop",
+      "imageAlt": "Interview App",
+      "overview": "AI interview simulation with Grok LLM & Whisper speech integration for real-time sentiment detection.",
+      "tech": ["React", "Grok LLM", "Whisper", "PyTorch"],
+      "actions": [
+        { "label": "Code", "href": "#", "variant": "secondary", "icon": "fa-brands fa-github", "behavior": "unavailable" },
+        { "label": "Demo", "href": "#", "variant": "primary", "icon": "fa-solid fa-arrow-up-right-from-square", "behavior": "unavailable" }
+      ]
+    },
+    {
+      "title": "AG BOT (PDF Q/A)",
+      "category": "RAG & GenAI",
+      "image": "https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=200&auto=format&fit=crop",
+      "imageAlt": "AG BOT",
+      "overview": "Document search and question-answering system using LangChain, OpenAI APIs, and FAISS vector indices.",
+      "tech": ["Python", "OpenAI", "LangChain", "FAISS"],
+      "actions": [
+        { "label": "Code", "href": "#", "variant": "secondary", "icon": "fa-brands fa-github", "behavior": "unavailable" },
+        { "label": "Demo", "href": "#", "variant": "primary", "icon": "fa-solid fa-arrow-up-right-from-square", "behavior": "unavailable" }
+      ]
+    },
+    {
+      "title": "KitUp Microservices",
+      "category": "Microservices",
+      "image": "https://images.unsplash.com/photo-1556742049-0a670f4a4591?q=80&w=200&auto=format&fit=crop",
+      "imageAlt": "KitUp",
+      "overview": "Full-stack e-commerce app built on MERN microservices with Redis caching and CloudFront delivery.",
+      "tech": ["Node.js", "MongoDB", "Redis", "AWS"],
+      "actions": [
+        { "label": "Code", "href": "https://github.com/ahannan08/Kit-Up", "variant": "secondary", "icon": "fa-brands fa-github", "behavior": "link" },
+        { "label": "Demo", "href": "https://vercel.com/mohammed-abdul-hannans-projects/kit-up", "variant": "primary", "icon": "fa-solid fa-arrow-up-right-from-square", "behavior": "link" }
+      ]
+    },
+    {
+      "title": "Expense Prediction App",
+      "category": "FinTech ML",
+      "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=200&auto=format&fit=crop",
+      "imageAlt": "Expense Prediction",
+      "overview": "AI expense tracking and prediction system providing intelligent financial insights and spending forecasting.",
+      "tech": ["Python", "Scikit-Learn", "FastAPI", "React"],
+      "actions": [
+        { "label": "Code", "href": "#", "variant": "secondary", "icon": "fa-brands fa-github", "behavior": "unavailable" },
+        { "label": "Demo", "href": "#", "variant": "primary", "icon": "fa-solid fa-arrow-up-right-from-square", "behavior": "unavailable" }
+      ]
+    },
+    {
+      "title": "Needy Talk Chat App",
+      "category": "Real-time",
+      "image": "https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=200&auto=format&fit=crop",
+      "imageAlt": "Needy Talk",
+      "overview": "Real-time chat platform engineered with WebSockets for instant messaging and dynamic rooms.",
+      "tech": ["Node.js", "Socket.io", "React", "MongoDB"],
+      "actions": [
+        { "label": "Code", "href": "#", "variant": "secondary", "icon": "fa-brands fa-github", "behavior": "unavailable" },
+        { "label": "Demo", "href": "#", "variant": "primary", "icon": "fa-solid fa-arrow-up-right-from-square", "behavior": "unavailable" }
+      ]
+    }
+  ]
+}
