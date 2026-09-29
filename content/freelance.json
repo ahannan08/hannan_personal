@@ -55,7 +55,7 @@
       "overview": "Corporate agency website for an IT solutions provider highlighting software services, consultancy, and client portfolios.",
       "tech": ["Next.js", "TypeScript", "Framer Motion"],
       "actions": [
-        { "label": "Visit Site", "href": "#", "variant": "primary", "icon": "fa-solid fa-arrow-up-right-from-square", "behavior": "unavailable" }
+        { "label": "Visit Site", "href": "#", "variant": "primary", "icon": "fa-solid fa-arrow-up-right-from-square", "behavior": "noop" }
       ]
     },
     {

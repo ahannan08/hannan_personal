@@ -10,16 +10,12 @@ type ProjectGridSectionProps = {
   data: ProjectsContent;
 };
 
-const DEFAULT_UNAVAILABLE =
-  "There is some issue loading for now.";
-
 export function ProjectGridSection({
   id,
   sectionClass,
   data,
 }: ProjectGridSectionProps) {
   const [modalMessage, setModalMessage] = useState<string | null>(null);
-  const fallbackMessage = data.unavailableMessage ?? DEFAULT_UNAVAILABLE;
 
   const closeModal = useCallback(() => setModalMessage(null), []);
 
@@ -32,17 +28,19 @@ export function ProjectGridSection({
     if (behavior === "link") {
       if (!action.href || action.href === "#") {
         e.preventDefault();
-        setModalMessage(fallbackMessage);
       }
       return;
     }
 
     e.preventDefault();
-    if (behavior === "message") {
-      setModalMessage(action.message ?? fallbackMessage);
+
+    if (behavior === "noop") {
       return;
     }
-    setModalMessage(fallbackMessage);
+
+    if (behavior === "message") {
+      setModalMessage(action.message ?? "");
+    }
   };
 
   return (
@@ -79,30 +77,34 @@ export function ProjectGridSection({
                   ))}
                 </div>
               </div>
-              <div className="compact-actions">
-                {item.actions.map((action) => {
-                  const behavior = action.behavior ?? "link";
-                  const isExternalLink =
-                    behavior === "link" &&
-                    action.href &&
-                    action.href !== "#";
+              {item.actions.length > 0 ? (
+                <div className="compact-actions">
+                  {item.actions.map((action) => {
+                    const behavior = action.behavior ?? "link";
+                    const isExternalLink =
+                      behavior === "link" &&
+                      action.href &&
+                      action.href !== "#";
+                    const isNoop = behavior === "noop";
 
-                  return (
-                    <a
-                      key={action.label}
-                      href={isExternalLink ? action.href : "#"}
-                      target={isExternalLink ? "_blank" : undefined}
-                      rel={
-                        isExternalLink ? "noopener noreferrer" : undefined
-                      }
-                      className={`compact-btn compact-btn-${action.variant}`}
-                      onClick={(e) => handleAction(e, action)}
-                    >
-                      <i className={action.icon} /> {action.label}
-                    </a>
-                  );
-                })}
-              </div>
+                    return (
+                      <a
+                        key={action.label}
+                        href={isExternalLink ? action.href : "#"}
+                        target={isExternalLink ? "_blank" : undefined}
+                        rel={
+                          isExternalLink ? "noopener noreferrer" : undefined
+                        }
+                        className={`compact-btn compact-btn-${action.variant}${isNoop ? " compact-btn-noop" : ""}`}
+                        onClick={(e) => handleAction(e, action)}
+                        aria-disabled={isNoop ? true : undefined}
+                      >
+                        <i className={action.icon} /> {action.label}
+                      </a>
+                    );
+                  })}
+                </div>
+              ) : null}
             </div>
           ))}
         </div>

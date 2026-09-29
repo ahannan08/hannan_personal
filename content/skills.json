@@ -1,10 +1,10 @@
 {
-  "subtitle": "TECHNICAL EXPERTISE",
-  "title": "Skills & Capabilities",
+  "subtitle": "TOOLBOX",
+  "title": "What I build with",
   "categories": [
     {
       "icon": "fa-solid fa-brain",
-      "title": "AI Development",
+      "title": "AI / ML",
       "skills": ["TensorFlow", "PyTorch", "LangChain", "OpenAI API", "Whisper"]
     },
     {
@@ -24,13 +24,8 @@
     },
     {
       "icon": "fa-solid fa-cloud",
-      "title": "Cloud Services",
-      "skills": ["AWS", "Azure", "GCP", "Hetzner"]
-    },
-    {
-      "icon": "fa-solid fa-gears",
-      "title": "DevOps Tools",
-      "skills": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "GitLab", "Terraform", "Prometheus"]
+      "title": "Cloud & DevOps",
+      "skills": ["AWS", "Azure", "GCP", "Hetzner", "Docker", "Kubernetes", "Jenkins", "GitHub Actions", "GitLab", "Terraform", "Prometheus"]
     }
   ]
 }

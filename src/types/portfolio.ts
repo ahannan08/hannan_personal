@@ -41,7 +41,7 @@ export type ExperienceContent = {
   entries: ExperienceEntry[];
 };
 
-export type ProjectActionBehavior = "link" | "unavailable" | "message";
+export type ProjectActionBehavior = "link" | "unavailable" | "message" | "noop";
 
 export type ProjectAction = {
   label: string;

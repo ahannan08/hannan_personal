@@ -116,26 +116,35 @@
     /* FIXED LEFT SIDEBAR SOCIAL CTA */
     .fixed-left-cta {
       position: fixed;
-      left: 30px;
-      bottom: 0;
+      left: 22px;
+      top: 50%;
+      transform: translateY(-50%);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
-      z-index: 900;
+      gap: 18px;
+      z-index: 1100;
     }
 
     .fixed-left-cta::after {
       content: '';
       width: 2px;
-      height: 100px;
+      height: 72px;
       background-color: var(--border);
+      margin-top: 4px;
     }
 
     .fixed-left-cta a {
       color: var(--text-muted);
       font-size: 1.25rem;
       transition: all 0.2s ease;
+      line-height: 1;
+    }
+
+    .fixed-left-cta a i {
+      display: inline-block;
+      width: 1.25rem;
+      text-align: center;
     }
 
     .fixed-left-cta a:hover {
@@ -675,6 +684,103 @@
       border-color: var(--primary);
       color: var(--primary);
       background: #FFFFFF;
+    }
+
+    /* SKILLS — TOOLBOX ROW LAYOUT */
+    .skills-toolbox-header {
+      margin-bottom: 2rem;
+    }
+
+    .skills-toolbox-rule {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin: 0.75rem 0 1.25rem;
+    }
+
+    .skills-toolbox-title {
+      font-size: 2.4rem;
+      letter-spacing: -0.03em;
+    }
+
+    .skills-toolbox {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 960px;
+    }
+
+    .skills-toolbox-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.5rem 2rem;
+      align-items: start;
+      padding: 1.35rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-toolbox-row:first-child {
+      padding-top: 0.25rem;
+    }
+
+    .skills-toolbox-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .skills-toolbox-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0;
+      padding-top: 0.45rem;
+    }
+
+    .skills-toolbox-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .skills-toolbox-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .skills-toolbox-badge i {
+      font-size: 1rem;
+      width: 1.15rem;
+      text-align: center;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .skills-toolbox-badge:hover {
+      border-color: rgba(108, 92, 231, 0.45);
+      box-shadow: 0 4px 14px rgba(108, 92, 231, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .compact-btn-noop {
+      opacity: 0.55;
+      cursor: default;
+    }
+
+    .compact-btn-noop:hover {
+      transform: none;
+      box-shadow: none;
     }
 
     /* BLOGS SECTION */
@@ -1242,8 +1348,18 @@
       .topic-list li { padding: 0; }
     }
 
+    @media (max-width: 900px) {
+      .fixed-left-cta {
+        left: 12px;
+        gap: 14px;
+      }
+      .fixed-left-cta a {
+        font-size: 1.1rem;
+      }
+    }
+
     @media (max-width: 768px) {
-      .nav-links, .fixed-left-cta { display: none; }
+      .nav-links { display: none; }
       .hero, .experience-section, .projects-section, .freelance-section, .skills-section, .about-section, .blogs-section, .contact-section { padding-left: 6%; padding-right: 6%; }
       .about-intro-card { padding: 1.5rem; }
       .contact-card { padding: 1.5rem; }
@@ -1251,6 +1367,30 @@
       .exp-layout { grid-template-columns: 1fr; gap: 2rem; }
       .exp-sticky-left { position: relative; top: 0; }
       .projects-grid-3x2, .skills-grid { grid-template-columns: 1fr; }
+      .skills-toolbox-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1.1rem 0;
+      }
+      .skills-toolbox-label {
+        padding-top: 0;
+      }
+      .skills-toolbox-title {
+        font-size: 2rem;
+      }
+      .fixed-left-cta {
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 10px 18px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      }
+      .fixed-left-cta::after { display: none; }
       .blog-card-body { padding: 1.25rem; }
       .blog-card-top { flex-direction: column; }
     }

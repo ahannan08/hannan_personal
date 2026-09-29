@@ -8,23 +8,32 @@ export function ExperienceSection({ data }: { data: ExperienceContent }) {
   const [activeId, setActiveId] = useState(data.nav[0]?.id ?? "");
 
   useEffect(() => {
-    const cards = document.querySelectorAll(".exp-card");
+    const entryIds = data.entries.map((e) => e.id);
 
     const onScroll = () => {
-      let current = data.nav[0]?.id ?? "";
-      cards.forEach((card) => {
-        const cardTop = (card as HTMLElement).offsetTop;
-        if (window.pageYOffset >= cardTop - 220) {
-          current = card.getAttribute("id") ?? current;
+      const marker = window.scrollY + window.innerHeight * 0.35;
+      let current = entryIds[0] ?? "";
+
+      for (const id of entryIds) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        if (marker >= top) {
+          current = id;
         }
-      });
+      }
+
       setActiveId(current);
     };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
     onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [data.nav]);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [data.entries]);
 
   return (
     <section id="experience" className="experience-section">
