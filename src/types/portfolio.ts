@@ -3,6 +3,7 @@ export type SiteContent = {
   brand: { label: string; icon: string };
   nav: { label: string; href: string }[];
   resumeUrl: string;
+  resumeLabel: string;
   social: { href: string; icon: string; title: string }[];
 };
 

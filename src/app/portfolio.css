@@ -26,6 +26,7 @@
       color: var(--text);
       font-family: var(--font-main);
       line-height: 1.5;
+      overflow-x: clip;
     }
 
     /* Grid Overlay */
@@ -492,6 +493,10 @@
       font-size: 2.2rem;
       font-weight: 700;
       color: var(--text);
+    }
+
+    .project-cards-carousel {
+      position: relative;
     }
 
     .project-cards-grid {
@@ -1505,13 +1510,146 @@
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
+      header {
+        height: 64px;
+        padding: 0 4%;
+      }
+      .header-right {
+        gap: 0.75rem;
+      }
+      .brand {
+        font-size: 1.05rem;
+      }
+      .resume-header-btn {
+        padding: 7px 12px;
+        font-size: 0.72rem;
+        gap: 6px;
+      }
       .hero, .experience-section, .projects-section, .freelance-section, .skills-section, .github-activity-section, .about-section, .blogs-section, .contact-section { padding-left: 6%; padding-right: 6%; }
       .about-intro-card { padding: 1.5rem; }
       .contact-card { padding: 1.5rem; }
-      .hero h1 { font-size: 2.6rem; }
+      .section-main-title {
+        font-size: 1.75rem;
+      }
+      .hero {
+        min-height: auto;
+        padding: 92px 6% 3rem;
+        align-items: flex-start;
+      }
+      .hero h1 { font-size: 2.15rem; letter-spacing: -0.5px; }
+      .hero p.bio-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .btn-hire {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+        margin-bottom: 2rem;
+      }
+      .metrics-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+      .metric-card {
+        padding: 0.85rem 0.75rem;
+      }
+      .metric-value {
+        font-size: 1.35rem;
+      }
+      .metric-label {
+        font-size: 0.72rem;
+      }
+      .open-status-badge {
+        font-size: 0.78rem;
+        padding: 6px 12px;
+      }
       .exp-layout { grid-template-columns: 1fr; gap: 2rem; }
       .exp-sticky-left { position: relative; top: 0; }
-      .project-cards-grid, .skills-grid { grid-template-columns: 1fr; }
+      .exp-nav-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.5rem;
+        padding-bottom: 0.35rem;
+        -webkit-overflow-scrolling: touch;
+      }
+      .exp-nav-item {
+        flex: 0 0 auto;
+        white-space: nowrap;
+      }
+      .skills-grid { grid-template-columns: 1fr; }
+      .project-cards-carousel {
+        margin-left: -6%;
+        margin-right: -6%;
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+      .project-cards-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.75rem;
+        scrollbar-width: thin;
+      }
+      .project-cards-grid .project-card-modern {
+        flex: 0 0 min(88vw, 320px);
+        scroll-snap-align: start;
+        max-width: min(88vw, 320px);
+      }
+      .project-card-overview {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .blogs-sidebar {
+        display: none;
+      }
+      .blogs-layout {
+        gap: 0;
+      }
+      .blog-list {
+        max-width: none;
+        gap: 0.85rem;
+      }
+      .blog-card {
+        grid-template-columns: 1fr;
+        border-radius: 10px;
+      }
+      .blog-card:hover {
+        transform: none;
+      }
+      .blog-card-accent,
+      .blog-icon-wrap,
+      .blog-meta,
+      .blog-excerpt,
+      .blog-read-link {
+        display: none;
+      }
+      .blog-card-body {
+        padding: 1rem 1.1rem;
+      }
+      .blog-card h2 {
+        font-size: 1.05rem;
+        margin-bottom: 0.65rem;
+      }
+      .blog-footer {
+        border-top: none;
+        padding-top: 0;
+        justify-content: flex-start;
+      }
+      .blog-tags {
+        gap: 0.35rem;
+      }
+      .blog-tag {
+        font-size: 0.72rem;
+        padding: 3px 8px;
+      }
       .skills-toolbox-row {
         grid-template-columns: 1fr;
         gap: 0.75rem;

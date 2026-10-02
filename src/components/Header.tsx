@@ -23,7 +23,7 @@ export function Header({ site }: { site: SiteContent }) {
           rel="noopener noreferrer"
           className="resume-header-btn"
         >
-          <i className="fa-solid fa-file-arrow-down" /> Résumé PDF
+          <i className="fa-solid fa-file-arrow-down" /> {site.resumeLabel}
         </a>
       </div>
     </header>

@@ -51,7 +51,8 @@ export function ProjectGridSection({
           <h2 className="section-main-title">{data.title}</h2>
         </div>
 
-        <div className="project-cards-grid">
+        <div className="project-cards-carousel" aria-label={`${data.title} carousel`}>
+          <div className="project-cards-grid">
           {data.items.map((item) => {
             const isSvgHero = item.image.endsWith(".svg");
 
@@ -114,6 +115,7 @@ export function ProjectGridSection({
             </article>
             );
           })}
+          </div>
         </div>
       </section>
 
