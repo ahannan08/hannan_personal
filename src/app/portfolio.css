@@ -469,7 +469,7 @@
     }
 
     /* PROJECTS & FREELANCE SHARED GRID UI */
-    .projects-section, .freelance-section, .skills-section, .about-section, .blogs-section, .contact-section {
+    .projects-section, .freelance-section, .skills-section, .github-activity-section, .about-section, .blogs-section, .contact-section {
       padding: 5rem 12%;
       position: relative;
     }
@@ -528,6 +528,16 @@
     .project-card-image {
       object-fit: cover;
       transition: transform 0.45s ease;
+    }
+
+    .project-card-media-svg {
+      background: linear-gradient(160deg, #faf9f6 0%, #f1f5f9 100%);
+    }
+
+    .project-card-image-svg {
+      object-fit: contain;
+      object-position: center;
+      padding: 10px 14px;
     }
 
     .project-card-modern:hover .project-card-image {
@@ -791,6 +801,83 @@
       border-color: rgba(108, 92, 231, 0.45);
       box-shadow: 0 4px 14px rgba(108, 92, 231, 0.08);
       transform: translateY(-1px);
+    }
+
+    /* GITHUB ACTIVITY */
+    .github-activity-section {
+      overflow-x: clip;
+    }
+
+    .github-activity-section .section-header {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .github-activity-card {
+      width: 100%;
+      max-width: 100%;
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      overflow: hidden;
+    }
+
+    .github-activity-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      min-height: 140px;
+      width: 100%;
+      max-width: 100%;
+      padding-bottom: 0.25rem;
+    }
+
+    .github-activity-calendar-placeholder {
+      min-height: 128px;
+      width: 100%;
+      border-radius: 6px;
+      background: linear-gradient(
+        90deg,
+        var(--bg) 0%,
+        #f1f5f9 50%,
+        var(--bg) 100%
+      );
+      background-size: 200% 100%;
+      animation: github-activity-placeholder-shimmer 1.4s ease-in-out infinite;
+    }
+
+    @keyframes github-activity-placeholder-shimmer {
+      0% {
+        background-position: 100% 0;
+      }
+      100% {
+        background-position: -100% 0;
+      }
+    }
+
+    .github-activity-scroll .react-activity-calendar {
+      color: var(--text-muted);
+    }
+
+    .github-activity-scroll > div:first-child {
+      width: max-content;
+      max-width: none;
+    }
+
+    .github-activity-profile-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .github-activity-profile-link:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
     }
 
     .compact-btn-noop {
@@ -1418,7 +1505,7 @@
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .hero, .experience-section, .projects-section, .freelance-section, .skills-section, .about-section, .blogs-section, .contact-section { padding-left: 6%; padding-right: 6%; }
+      .hero, .experience-section, .projects-section, .freelance-section, .skills-section, .github-activity-section, .about-section, .blogs-section, .contact-section { padding-left: 6%; padding-right: 6%; }
       .about-intro-card { padding: 1.5rem; }
       .contact-card { padding: 1.5rem; }
       .hero h1 { font-size: 2.6rem; }

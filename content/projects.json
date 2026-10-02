@@ -3,29 +3,28 @@
   "title": "Featured Projects",
   "items": [
     {
-      "title": "Virtual AI Interview App",
-      "category": "AI & Speech",
-      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=900&h=506&auto=format&fit=crop",
-      "imageAlt": "Interview App",
-      "overview": "AI interview simulation with Grok LLM & Whisper speech integration for real-time sentiment detection.",
-      "tech": ["React", "Grok LLM", "Whisper", "PyTorch"],
-      "actions": []
+      "title": "Study RAG",
+      "category": "RAG & EdTech",
+      "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=900&h=506&auto=format&fit=crop",
+      "imageAlt": "Study RAG learning platform",
+      "overview": "Study companion that turns course materials into an interactive workspace—upload documents, chat with your content, browse extracted sections, build flashcards, and take practice tests with scored evaluation.",
+      "tech": ["Next.js", "RAG", "LLM", "Vercel"],
+      "actions": [
+        {
+          "label": "Live Demo",
+          "href": "https://study-rag-nu.vercel.app",
+          "variant": "primary",
+          "icon": "fa-solid fa-arrow-up-right-from-square",
+          "behavior": "link"
+        }
+      ]
     },
     {
-      "title": "AG BOT (PDF Q/A)",
-      "category": "RAG & GenAI",
-      "image": "https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=900&h=506&auto=format&fit=crop",
-      "imageAlt": "AG BOT",
-      "overview": "Document search and question-answering system using LangChain, OpenAI APIs, and FAISS vector indices.",
-      "tech": ["Python", "OpenAI", "LangChain", "FAISS"],
-      "actions": []
-    },
-    {
-      "title": "KitUp Microservices",
+      "title": "KitUp",
       "category": "Microservices",
-      "image": "https://images.unsplash.com/photo-1556742049-0a670f4a4591?q=80&w=900&h=506&auto=format&fit=crop",
-      "imageAlt": "KitUp",
-      "overview": "Full-stack e-commerce app built on MERN microservices with Redis caching and CloudFront delivery.",
+      "image": "/kitup-players.svg",
+      "imageAlt": "KitUp e-commerce",
+      "overview": "Full-stack e-commerce platform on MERN microservices with Redis caching and CloudFront delivery for a fast storefront experience.",
       "tech": ["Node.js", "MongoDB", "Redis", "AWS"],
       "actions": [
         {
@@ -38,13 +37,21 @@
       ]
     },
     {
-      "title": "Expense Prediction App",
+      "title": "Expense App",
       "category": "FinTech ML",
       "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=900&h=506&auto=format&fit=crop",
-      "imageAlt": "Expense Prediction",
-      "overview": "AI expense tracking and prediction system providing intelligent financial insights and spending forecasting.",
+      "imageAlt": "Expense tracking app",
+      "overview": "AI-assisted expense tracking and prediction with clear spending insights, categorization, and forecasting to support smarter financial decisions.",
       "tech": ["Python", "Scikit-Learn", "FastAPI", "React"],
-      "actions": []
+      "actions": [
+        {
+          "label": "Live Demo",
+          "href": "https://expense-app-navy.vercel.app",
+          "variant": "primary",
+          "icon": "fa-solid fa-arrow-up-right-from-square",
+          "behavior": "link"
+        }
+      ]
     },
     {
       "title": "Needy Talk Chat App",

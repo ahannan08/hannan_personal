@@ -75,6 +75,14 @@ export type SkillsContent = {
   categories: { icon: string; title: string; skills: string[] }[];
 };
 
+export type GitHubActivityContent = {
+  subtitle: string;
+  title: string;
+  username: string;
+  profileUrl: string;
+  linkLabel: string;
+};
+
 export type AboutContent = {
   subtitle: string;
   title: string;

@@ -52,15 +52,21 @@ export function ProjectGridSection({
         </div>
 
         <div className="project-cards-grid">
-          {data.items.map((item) => (
+          {data.items.map((item) => {
+            const isSvgHero = item.image.endsWith(".svg");
+
+            return (
             <article key={item.title} className="project-card-modern">
-              <div className="project-card-media">
+              <div
+                className={`project-card-media${isSvgHero ? " project-card-media-svg" : ""}`}
+              >
                 <Image
                   src={item.image}
                   alt={item.imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="project-card-image"
+                  className={`project-card-image${isSvgHero ? " project-card-image-svg" : ""}`}
+                  unoptimized={isSvgHero}
                 />
                 <span className="project-card-category">{item.category}</span>
               </div>
@@ -106,7 +112,8 @@ export function ProjectGridSection({
                 ) : null}
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       </section>
 

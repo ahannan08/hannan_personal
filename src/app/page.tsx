@@ -6,6 +6,7 @@ import { FixedSocial } from "@/components/FixedSocial";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ProjectGridSection } from "@/components/ProjectGridSection";
+import { GitHubActivitySection } from "@/components/GitHubActivitySection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { loadAllPortfolioContent } from "@/lib/content";
 import type {
@@ -13,6 +14,7 @@ import type {
   BlogsContent,
   ContactContent,
   ExperienceContent,
+  GitHubActivityContent,
   HeroContent,
   ProjectsContent,
   SiteContent,
@@ -28,6 +30,7 @@ export default async function HomePage() {
   const projects = content.projects as ProjectsContent;
   const freelance = content.freelance as ProjectsContent;
   const skills = content.skills as SkillsContent;
+  const githubActivity = content.githubActivity as GitHubActivityContent;
   const about = content.about as AboutContent;
   const blogs = content.blogs as BlogsContent;
   const contact = content.contact as ContactContent;
@@ -38,6 +41,7 @@ export default async function HomePage() {
       <Header site={site} />
       <FixedSocial social={site.social} />
       <HeroSection data={hero} />
+      <GitHubActivitySection data={githubActivity} />
       <SkillsSection data={skills} />
       <ExperienceSection data={experience} />
       <ProjectGridSection

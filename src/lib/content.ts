@@ -8,6 +8,7 @@ export type ContentSection =
   | "projects"
   | "freelance"
   | "skills"
+  | "github-activity"
   | "about"
   | "blogs"
   | "contact";
@@ -46,6 +47,7 @@ export async function loadAllPortfolioContent() {
     projects,
     freelance,
     skills,
+    githubActivity,
     about,
     blogs,
     contact,
@@ -56,6 +58,7 @@ export async function loadAllPortfolioContent() {
     loadContent("projects"),
     loadContent("freelance"),
     loadContent("skills"),
+    loadContent("github-activity"),
     loadContent("about"),
     loadContent("blogs"),
     loadContent("contact"),
@@ -68,6 +71,7 @@ export async function loadAllPortfolioContent() {
     projects,
     freelance,
     skills,
+    githubActivity,
     about,
     blogs,
     contact,
