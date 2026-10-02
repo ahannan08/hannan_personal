@@ -19,6 +19,8 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: clip;
+      max-width: 100%;
     }
 
     body {
@@ -27,6 +29,15 @@
       font-family: var(--font-main);
       line-height: 1.5;
       overflow-x: clip;
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    img,
+    video,
+    svg {
+      max-width: 100%;
+      height: auto;
     }
 
     /* Grid Overlay */
@@ -157,10 +168,12 @@
     .hero {
       position: relative;
       width: 100%;
+      max-width: 100%;
       min-height: 100vh;
       display: flex;
       align-items: center;
       padding: 110px 12% 60px 12%;
+      overflow-x: clip;
     }
 
     #neural-canvas {
@@ -287,13 +300,22 @@
     .experience-section {
       padding: 6rem 12%;
       position: relative;
+      max-width: 100%;
+      overflow-x: clip;
     }
 
     .exp-layout {
       display: grid;
-      grid-template-columns: 300px 1fr;
+      grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
       gap: 3.5rem;
       align-items: start;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .exp-layout > * {
+      min-width: 0;
+      max-width: 100%;
     }
 
     .exp-sticky-left {
@@ -372,6 +394,11 @@
       padding: 2.2rem;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
       transition: all 0.3s ease;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .exp-card:hover {
@@ -436,6 +463,8 @@
       font-size: 0.95rem;
       color: var(--text-muted);
       line-height: 1.6;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     .exp-bullets li::before {
@@ -473,6 +502,8 @@
     .projects-section, .freelance-section, .skills-section, .github-activity-section, .about-section, .blogs-section, .contact-section {
       padding: 5rem 12%;
       position: relative;
+      max-width: 100%;
+      overflow-x: clip;
     }
 
     .section-header {
@@ -1565,8 +1596,16 @@
         font-size: 0.78rem;
         padding: 6px 12px;
       }
-      .exp-layout { grid-template-columns: 1fr; gap: 2rem; }
-      .exp-sticky-left { position: relative; top: 0; }
+      .experience-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      .exp-layout { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+      .exp-sticky-left { position: relative; top: 0; width: 100%; }
+      .exp-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+      }
       .exp-nav-list {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -1574,17 +1613,47 @@
         gap: 0.5rem;
         padding-bottom: 0.35rem;
         -webkit-overflow-scrolling: touch;
+        max-width: 100%;
       }
       .exp-nav-item {
         flex: 0 0 auto;
         white-space: nowrap;
+        padding: 0.65rem 0.9rem;
+        max-width: 78vw;
+      }
+      .exp-card {
+        padding: 1.15rem 1rem;
+        border-radius: 12px;
+      }
+      .exp-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+      .exp-card-title-group h3 {
+        font-size: 1.05rem;
+        line-height: 1.35;
+      }
+      .exp-date-location {
+        font-size: 0.78rem;
+      }
+      .project-title {
+        font-size: 0.92rem;
+        align-items: flex-start;
+        line-height: 1.4;
+      }
+      .exp-bullets li {
+        font-size: 0.86rem;
+        padding-left: 1.15rem;
+      }
+      .skill-chip {
+        font-size: 0.72rem;
       }
       .skills-grid { grid-template-columns: 1fr; }
       .project-cards-carousel {
-        margin-left: -6%;
-        margin-right: -6%;
-        padding-left: 6%;
-        padding-right: 6%;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
       }
       .project-cards-grid {
         display: flex;
@@ -1597,9 +1666,10 @@
         scrollbar-width: thin;
       }
       .project-cards-grid .project-card-modern {
-        flex: 0 0 min(88vw, 320px);
+        flex: 0 0 min(84vw, 300px);
         scroll-snap-align: start;
-        max-width: min(88vw, 320px);
+        max-width: min(84vw, 300px);
+        min-width: 0;
       }
       .project-card-overview {
         display: -webkit-box;
@@ -1649,6 +1719,17 @@
       .blog-tag {
         font-size: 0.72rem;
         padding: 3px 8px;
+      }
+      .about-layout,
+      .about-intro-card,
+      .contact-wrap,
+      .contact-card,
+      .skills-toolbox {
+        max-width: 100%;
+        min-width: 0;
+      }
+      .skills-toolbox-badge {
+        max-width: 100%;
       }
       .skills-toolbox-row {
         grid-template-columns: 1fr;
